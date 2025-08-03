@@ -1,3 +1,4 @@
+// Jenkinsfile
 pipeline {
     agent any
     environment {
@@ -6,7 +7,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/rakeshsurya-cloud/informatica-secure-agent-aws.git'
+                script {
+                    git branch: 'main', url: 'https://github.com/rakeshsurya-cloud/informatica-secure-agent-aws.git'
+                }
             }
         }
         stage('Terraform Init') {
@@ -21,9 +24,16 @@ pipeline {
         }
         stage('Terraform Apply') {
             steps {
-                input message: "Approve deployment?", ok: "Deploy"
-                sh 'terraform apply -auto-approve'
+                // The manual approval step has been removed.
+                // This stage will now execute immediately after the plan is complete.
+                script {
+                    sh '''
+                        set -x  // This provides verbose logging for debugging
+                        terraform apply -auto-approve
+                    '''
+                }
             }
         }
     }
 }
+
