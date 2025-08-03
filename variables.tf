@@ -10,7 +10,7 @@ variable "instance_type" {
 
 variable "ami_id" {
   description = "Amazon Machine Image (AMI) for EC2 instance"
-  default     = "ami-0abcdef1234567890" # Replace with a real AMI
+  default     = "ami-054b7fc3c333ac6d2" # 
 }
 
 variable "secret_name" {
