@@ -73,11 +73,6 @@ variable "infa_installer_url" {
   type        = string
 }
 
-variable "informatica_agent_token" {
-  description = "Token for Secure Agent registration"
-  type        = string
-}
-
 variable "informatica_user" {
   description = "Informatica cloud user email"
   type        = string

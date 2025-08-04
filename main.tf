@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.aws_region
-}
-
 # IAM Role for Secure Agent
 resource "aws_iam_role" "secure_agent_role" {
   name = "informatica-secure-agent-role"
