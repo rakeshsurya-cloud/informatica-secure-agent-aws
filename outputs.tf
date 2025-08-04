@@ -3,7 +3,12 @@ output "ec2_public_ip" {
   value       = aws_instance.secure_agent_ec2.public_ip
 }
 
-output "secret_arn" {
+output "snowflake_secret_arn" {
   description = "ARN of the Snowflake secret"
   value       = aws_secretsmanager_secret.snowflake_secret.arn
+}
+
+output "infa_token_secret_arn" {
+  description = "ARN of the Informatica Agent token secret"
+  value       = aws_secretsmanager_secret.infa_token_secret.arn
 }
