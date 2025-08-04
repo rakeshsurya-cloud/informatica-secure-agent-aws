@@ -73,12 +73,3 @@ variable "infa_installer_url" {
   type        = string
 }
 
-variable "informatica_user" {
-  description = "Informatica cloud user email"
-  type        = string
-}
-
-variable "informatica_password" {
-  description = "Informatica cloud password"
-  type        = string
-}
