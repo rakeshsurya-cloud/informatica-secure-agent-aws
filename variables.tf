@@ -73,3 +73,7 @@ variable "infa_installer_url" {
   type        = string
 }
 
+variable "key_name" {
+  description = "Name of the existing EC2 key pair to allow SSH access"
+  type        = string
+}
